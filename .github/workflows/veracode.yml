@@ -54,12 +54,12 @@ jobs:
       with:
         pipeline-results-json: results.json
     - name: Upload Results to GitHub Artifacts
-      uses: action/upload-artifact@latest
+      uses: actions/upload-artifact@latest
       with:
         name: veracode-results.sarif
         path: veracode-results.sarif
     - name: Upload Sarif to GitHub Artifacts
-      uses: action/upload-artifact@latest
+      uses: actions/upload-artifact@latest
       with:
         name: results.json
         path: results.json
