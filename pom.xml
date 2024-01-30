@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.owasp</groupId>
     <artifactId>benchmark</artifactId>
-    <version>1.2</version>
+    <version>8</version>
     <packaging>war</packaging>
 
     <name>OWASP Benchmark for Java</name>
@@ -35,6 +35,13 @@
             <id>findsecbugs</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <debug>true</debug>
+                            <debuglevel>lines,vars,source</debuglevel>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs-maven-plugin</artifactId>
