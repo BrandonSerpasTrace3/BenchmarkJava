@@ -20,9 +20,8 @@ jobs:
         java-version: '8'
         distribution: 'zulu'
 
-
     - name: Run build
-      run: mvn clean build      
+      run: mvn install; mvn clean package; ls -lah      
     
     - name: Download ShiftLeft CLI
       run: |
